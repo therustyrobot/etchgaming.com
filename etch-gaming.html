@@ -49,8 +49,7 @@
   nav{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
   .nav-brand{display:flex;align-items:center;gap:10px}
-  .nav-brand svg{width:26px;height:26px}
-  .nav-brand span{font-family:var(--disp);font-weight:700;letter-spacing:.06em;font-size:1.05rem}
+  .nav-brand img{height:34px;width:auto;display:block}
   .nav-links{display:flex;gap:28px;align-items:center;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
   .nav-links a.link{opacity:.72;transition:opacity .2s,color .2s;border-bottom:1px solid transparent;padding-bottom:2px}
   .nav-links a.link:hover,.nav-links a.link:focus-visible{opacity:1;color:var(--orange);border-color:var(--orange)}
@@ -69,9 +68,8 @@
 
   /* ---------- Hero ---------- */
   .hero{padding:80px 0 60px;position:relative}
-  .hero .tag-row{display:flex;gap:10px;align-items:center;margin-bottom:22px;flex-wrap:wrap}
   .warn-icon{width:16px;height:16px;flex:none}
-  .spec-title{font-family:var(--disp);font-weight:700;font-size:clamp(.95rem,2vw,1.1rem);letter-spacing:.04em;color:var(--dim);margin-bottom:6px}
+  .spec-title{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;font-size:clamp(.95rem,2vw,1.1rem);letter-spacing:.04em;color:var(--dim);margin-bottom:6px;margin-top:22px}
   .spec-ref{font-size:.72rem;color:var(--dimmer);letter-spacing:.1em;margin-bottom:44px}
   .headline{font-family:var(--disp);font-weight:700;font-size:clamp(3.2rem,11vw,7.5rem);line-height:.92;letter-spacing:-.01em}
   .headline .orange{color:var(--orange)}
@@ -148,6 +146,9 @@
   @media(max-width:820px){
     .nav-links a.link{display:none}
     .spec-grid{grid-template-columns:repeat(2,1fr)}
+    .building-copy,.contact-grid{grid-template-columns:1fr 1fr;gap:32px}
+  }
+  @media(max-width:560px){
     .building-copy,.contact-grid{grid-template-columns:1fr}
   }
 </style>
@@ -164,13 +165,7 @@
 <nav>
   <div class="wrap nav-inner">
     <a class="nav-brand" href="#top" aria-label="Etch Gaming home">
-      <svg viewBox="0 0 100 100" aria-hidden="true">
-        <circle cx="54" cy="46" r="40" fill="none" stroke="#e9e6df" stroke-width="6"/>
-        <path d="M32 32 H76 L54 64 Z" fill="none" stroke="#e9e6df" stroke-width="6" stroke-linejoin="round"/>
-        <line x1="12" y1="78" x2="26" y2="70" stroke="#FF5F1F" stroke-width="6" stroke-linecap="round"/>
-        <line x1="20" y1="92" x2="38" y2="82" stroke="#FF5F1F" stroke-width="6" stroke-linecap="round"/>
-      </svg>
-      <span>ETCH</span>
+      <img src="logo.png" alt="Etch Gaming">
     </a>
     <div class="nav-links">
       <a class="link" href="#catalog">Catalog</a>
@@ -183,19 +178,12 @@
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="tag-row">
+    <div class="spec-title">
       <svg class="warn-icon" viewBox="0 0 24 24" fill="none" stroke="#FF5F1F" stroke-width="2"><path d="M12 3 L22 20 H2 Z"/><line x1="12" y1="9" x2="12" y2="14"/><circle cx="12" cy="17" r="1"/></svg>
-      <span class="mono-label">Specification Sheet</span>
+      HAND-CUT TABLETOP HARDWARE // REF: ETCH-01
     </div>
-    <div class="spec-title">HAND-CUT TABLETOP HARDWARE // REF: ETCH-01</div>
-    <h1 class="headline">ETCH<span class="orange">.</span></h1>
-    <div class="hero-sub">GAMING</div>
-    <p class="hero-desc">Laser-cut, hand-finished accessories for the table — tokens, trays, and custom pieces cut from real wood and acrylic, built to survive game night after game night.</p>
-    <div class="sn-row">
-      <span>SN: 014</span>
-      <span class="live">● ACTIVE</span>
-      <span>MADE IN USA</span>
-    </div>
+    <h1 class="headline">MAGIC UPGRADED<span class="orange">.</span></h1>
+    <p class="hero-desc">Laser-cut, hand-finished tokens, trays, and more from real wood and acrylic, that stand out on the table.</p>
     <div class="hero-ctas">
       <a class="btn btn-solid" href="https://www.etsy.com/shop/EtchGaming" target="_blank" rel="noopener">Open Shop</a>
       <a class="btn btn-line" href="#catalog">View Catalog</a>
@@ -255,20 +243,20 @@
     <div class="file-list">
       <div class="file-row">
         <div class="file-id">FILE: #001</div>
-        <div class="file-name">TOKENS &amp; COUNTERS</div>
-        <div class="file-desc">Acrylic and wood tokens for Magic and other card games — +1/+1 counters, energy, loyalty dials, and life trackers that read at a glance.</div>
+        <div class="file-name">TOKENS</div>
+        <div class="file-desc">Acrylic and wood tokens for Magic and other card games, cut clean and sized to read at a glance across the table.</div>
         <a class="file-link" href="https://www.etsy.com/shop/EtchGaming" target="_blank" rel="noopener">View shop →</a>
       </div>
       <div class="file-row">
         <div class="file-id">FILE: #002</div>
-        <div class="file-name">DICE TRAYS &amp; TABLE GEAR</div>
-        <div class="file-desc">Snap-flat rolling trays and deck boxes that pack light and set up in seconds at your LGS or kitchen table.</div>
+        <div class="file-name">COUNTERS</div>
+        <div class="file-desc">+1/+1 counters, energy, loyalty dials, and life trackers built for fast, easy tracking mid-game.</div>
         <a class="file-link" href="https://www.etsy.com/shop/EtchGaming" target="_blank" rel="noopener">View shop →</a>
       </div>
       <div class="file-row">
         <div class="file-id">FILE: #003</div>
-        <div class="file-name">CUSTOM ENGRAVING</div>
-        <div class="file-desc">League trophies, club logos, gifts for your playgroup. Send your art — if it fits the laser bed, we can probably make it.</div>
+        <div class="file-name">COMMAND ZONE TRAYS</div>
+        <div class="file-desc">Walnut and cherry veneer Command Zone trays with integrated life counters, commander cast trackers, and D20 damage slots — the ultimate EDH accessory.</div>
         <a class="file-link" href="https://www.etsy.com/shop/EtchGaming" target="_blank" rel="noopener">View shop →</a>
       </div>
     </div>
